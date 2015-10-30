@@ -78,7 +78,7 @@ public class VolumeButtonsListener extends CordovaPlugin implements OnKeyListene
 
 			// Get the reference to the callbacks and start the listening process
 			this.volumeCallbackContext= callbackContext;
-			this.webView.setOnKeyListener(this);
+			// this.webView.setOnKeyListener(this);
 
 			// Don't return any result now
 			PluginResult pluginResult= new PluginResult(PluginResult.Status.NO_RESULT);
@@ -91,7 +91,7 @@ public class VolumeButtonsListener extends CordovaPlugin implements OnKeyListene
 			// Erase the callbacks reference and stop the listening process
 			sendSignal(new JSONObject(), false); // release status callback in Javascript side
 			this.volumeCallbackContext= null;
-			this.webView.setOnKeyListener(null);
+			// this.webView.setOnKeyListener(null);
 			callbackContext.success();
 			return true;			
 		}
@@ -110,7 +110,7 @@ public class VolumeButtonsListener extends CordovaPlugin implements OnKeyListene
 	public void onDestroy(){
 
 		// Stop the listening process
-		this.webView.setOnKeyListener(null);
+		// this.webView.setOnKeyListener(null);
 	}
 
 
@@ -124,7 +124,7 @@ public class VolumeButtonsListener extends CordovaPlugin implements OnKeyListene
 	public void onReset(){
 		
 		// Stop the listening process
-		this.webView.setOnKeyListener(null);
+		// this.webView.setOnKeyListener(null);
 	}
 
 
